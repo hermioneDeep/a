@@ -1,0 +1,2568 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- Mirrored from demo.ramsthemes.com/projects/ingmarwp/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 19:15:59 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- include internal CSS custom styles based on ACF custom fields -->
+    <style>
+         :root {
+            --wp-admin-theme-color: #007cba;
+            --wp-admin-theme-color-darker-10: #006ba1;
+            --wp-admin-theme-color-darker-20: #005a87
+        }
+        
+        .wp-block-button__link {
+            color: #fff;
+            background-color: #32373c;
+            border: none;
+            border-radius: 28px;
+            box-shadow: none;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 18px;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            overflow-wrap: break-word
+        }
+        
+        .wp-block-button__link:active,
+        .wp-block-button__link:focus,
+        .wp-block-button__link:hover,
+        .wp-block-button__link:visited {
+            color: #fff
+        }
+        
+        .wp-block-button.no-border-radius,
+        .wp-block-button__link.no-border-radius {
+            border-radius: 0!important
+        }
+        
+        .wp-block-buttons .wp-block-button {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 8px
+        }
+        
+        .wp-block-buttons .wp-block-button:last-child {
+            margin-right: 0
+        }
+        
+        .wp-block-cover,
+        .wp-block-cover-image {
+            position: relative;
+            background-size: cover;
+            background-position: 50%;
+            min-height: 430px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px
+        }
+        
+        @supports (-webkit-overflow-scrolling:touch) {
+            .wp-block-cover-image.has-parallax,
+            .wp-block-cover.has-parallax {
+                background-attachment: scroll
+            }
+        }
+        
+        .wp-block-cover-image:after,
+        .wp-block-cover:after {
+            display: block;
+            content: "";
+            font-size: 0;
+            min-height: inherit
+        }
+        
+        @supports ((position:-webkit-sticky) or (position:sticky)) {
+            .wp-block-cover-image:after,
+            .wp-block-cover:after {
+                content: none
+            }
+        }
+        
+        .wp-block-cover h1:not(.has-text-color),
+        .wp-block-cover h2:not(.has-text-color),
+        .wp-block-cover h3:not(.has-text-color),
+        .wp-block-cover h4:not(.has-text-color),
+        .wp-block-cover h5:not(.has-text-color),
+        .wp-block-cover h6:not(.has-text-color),
+        .wp-block-cover p:not(.has-text-color),
+        .wp-block-cover-image h1:not(.has-text-color),
+        .wp-block-cover-image h2:not(.has-text-color),
+        .wp-block-cover-image h3:not(.has-text-color),
+        .wp-block-cover-image h4:not(.has-text-color),
+        .wp-block-cover-image h5:not(.has-text-color),
+        .wp-block-cover-image h6:not(.has-text-color),
+        .wp-block-cover-image p:not(.has-text-color) {
+            color: inherit
+        }
+        
+        .wp-block-cover-image.is-position-top-left,
+        .wp-block-cover.is-position-top-left {
+            align-items: flex-start;
+            justify-content: flex-start
+        }
+        
+        .wp-block-cover-image.is-position-top-center,
+        .wp-block-cover.is-position-top-center {
+            align-items: flex-start;
+            justify-content: center
+        }
+        
+        .wp-block-cover-image.is-position-top-right,
+        .wp-block-cover.is-position-top-right {
+            align-items: flex-start;
+            justify-content: flex-end
+        }
+        
+        .wp-block-cover-image.is-position-center-left,
+        .wp-block-cover.is-position-center-left {
+            align-items: center;
+            justify-content: flex-start
+        }
+        
+        .wp-block-cover-image.is-position-center-center,
+        .wp-block-cover.is-position-center-center {
+            align-items: center;
+            justify-content: center
+        }
+        
+        .wp-block-cover-image.is-position-center-right,
+        .wp-block-cover.is-position-center-right {
+            align-items: center;
+            justify-content: flex-end
+        }
+        
+        .wp-block-cover-image.is-position-bottom-left,
+        .wp-block-cover.is-position-bottom-left {
+            align-items: flex-end;
+            justify-content: flex-start
+        }
+        
+        .wp-block-cover-image.is-position-bottom-center,
+        .wp-block-cover.is-position-bottom-center {
+            align-items: flex-end;
+            justify-content: center
+        }
+        
+        .wp-block-cover-image.is-position-bottom-right,
+        .wp-block-cover.is-position-bottom-right {
+            align-items: flex-end;
+            justify-content: flex-end
+        }
+        
+        .wp-block-cover__video-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            object-fit: cover
+        }
+        
+        .wp-block-cover-image-text,
+        .wp-block-cover-text {
+            color: #fff
+        }
+        
+        .wp-block-cover-image-text a,
+        .wp-block-cover-image-text a:active,
+        .wp-block-cover-image-text a:focus,
+        .wp-block-cover-image-text a:hover,
+        .wp-block-cover-text a,
+        .wp-block-cover-text a:active,
+        .wp-block-cover-text a:focus,
+        .wp-block-cover-text a:hover {
+            color: #fff
+        }
+        
+        .wp-block-cover-image .wp-block-cover.has-left-content {
+            justify-content: flex-start
+        }
+        
+        .wp-block-cover-image .wp-block-cover.has-right-content {
+            justify-content: flex-end
+        }
+        
+        .wp-block-cover-image.has-left-content .wp-block-cover-image-text,
+        .wp-block-cover.has-left-content .wp-block-cover-text {
+            margin-left: 0;
+            text-align: left
+        }
+        
+        .wp-block-cover-image.has-right-content .wp-block-cover-image-text,
+        .wp-block-cover.has-right-content .wp-block-cover-text {
+            margin-right: 0;
+            text-align: right
+        }
+        
+        .wp-block-cover .wp-block-cover-text,
+        .wp-block-cover-image .wp-block-cover-image-text {
+            font-size: 2em;
+            line-height: 1.25;
+            z-index: 1;
+            margin-bottom: 0;
+            max-width: 580px;
+            padding: 14px;
+            text-align: center
+        }
+        
+        .wp-block[data-align=left]>[data-type^=core-embed],
+        .wp-block[data-align=right]>[data-type^=core-embed] {
+            max-width: 360px;
+            width: 100%
+        }
+        
+        .wp-block[data-align=left]>[data-type^=core-embed] .wp-block-embed__wrapper,
+        .wp-block[data-align=right]>[data-type^=core-embed] .wp-block-embed__wrapper {
+            min-width: 280px
+        }
+        
+        .wp-block-embed {
+            margin-bottom: 1em
+        }
+        
+        .wp-block-embed__wrapper {
+            position: relative
+        }
+        
+        .wp-block-file {
+            margin-bottom: 1.5em
+        }
+        
+        .wp-block-file .wp-block-file__button {
+            background: #32373c;
+            border-radius: 2em;
+            color: #fff;
+            font-size: 13px;
+            padding: .5em 1em
+        }
+        
+        .wp-block-file a.wp-block-file__button {
+            text-decoration: none
+        }
+        
+        .wp-block-file a.wp-block-file__button:active,
+        .wp-block-file a.wp-block-file__button:focus,
+        .wp-block-file a.wp-block-file__button:hover,
+        .wp-block-file a.wp-block-file__button:visited {
+            box-shadow: none;
+            color: #fff;
+            opacity: .85;
+            text-decoration: none
+        }
+        
+        .wp-block-file *+.wp-block-file__button {
+            margin-left: .75em
+        }
+        
+        @supports ((position:-webkit-sticky) or (position:sticky)) {
+            .blocks-gallery-grid .blocks-gallery-image figure,
+            .blocks-gallery-grid .blocks-gallery-item figure,
+            .wp-block-gallery .blocks-gallery-image figure,
+            .wp-block-gallery .blocks-gallery-item figure {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-start
+            }
+        }
+        
+        @supports ((position:-webkit-sticky) or (position:sticky)) {
+            .blocks-gallery-grid .blocks-gallery-image img,
+            .blocks-gallery-grid .blocks-gallery-item img,
+            .wp-block-gallery .blocks-gallery-image img,
+            .wp-block-gallery .blocks-gallery-item img {
+                width: auto
+            }
+        }
+        
+        @supports ((position:-webkit-sticky) or (position:sticky)) {
+            .blocks-gallery-grid.is-cropped .blocks-gallery-image a,
+            .blocks-gallery-grid.is-cropped .blocks-gallery-image img,
+            .blocks-gallery-grid.is-cropped .blocks-gallery-item a,
+            .blocks-gallery-grid.is-cropped .blocks-gallery-item img,
+            .wp-block-gallery.is-cropped .blocks-gallery-image a,
+            .wp-block-gallery.is-cropped .blocks-gallery-image img,
+            .wp-block-gallery.is-cropped .blocks-gallery-item a,
+            .wp-block-gallery.is-cropped .blocks-gallery-item img {
+                height: 100%;
+                flex: 1;
+                object-fit: cover
+            }
+        }
+        
+        h1.has-background,
+        h2.has-background,
+        h3.has-background,
+        h4.has-background,
+        h5.has-background,
+        h6.has-background {
+            padding: 20px 38px
+        }
+        
+        .wp-block-image {
+            margin-bottom: 1em
+        }
+        
+        .wp-block-image img {
+            max-width: 100%
+        }
+        
+        .is-style-rounded img {
+            border-radius: 9999px
+        }
+        
+        @supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none) {
+            .is-style-circle-mask img {
+                -webkit-mask-image: url(data:image/svg+xml;utf8,SVG_REPLACED);
+                mask-image: url(data:image/svg+xml;utf8,SVG_REPLACED);
+                mask-mode: alpha;
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: contain;
+                mask-size: contain;
+                -webkit-mask-position: center;
+                mask-position: center;
+                border-radius: 0
+            }
+        }
+        
+        .wp-block-latest-comments .avatar {
+            border-radius: 24px;
+            display: block;
+            float: left;
+            height: 40px;
+            margin-right: 12px;
+            width: 40px
+        }
+        
+        .wp-block-latest-posts.wp-block-latest-posts__list {
+            list-style: none
+        }
+        
+        .wp-block-latest-posts.wp-block-latest-posts__list li {
+            clear: both
+        }
+        
+        .wp-block-latest-posts.is-grid {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0
+        }
+        
+        .wp-block-latest-posts.is-grid li {
+            margin: 0 20px 20px 0;
+            width: 100%
+        }
+        
+        .wp-block-latest-posts__post-author {
+            display: block;
+            color: #6c7781;
+            font-size: 13px
+        }
+        
+        .wp-block-latest-posts__featured-image img {
+            height: auto;
+            width: auto
+        }
+        
+        .wp-block-media-text {
+            /*!rtl:begin:ignore*/
+            direction: ltr;
+            /*!rtl:end:ignore*/
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 50% 1fr;
+            grid-template-columns: 50% 1fr;
+            -ms-grid-rows: auto;
+            grid-template-rows: auto
+        }
+        
+        .wp-block-media-text.has-media-on-the-right {
+            -ms-grid-columns: 1fr 50%;
+            grid-template-columns: 1fr 50%
+        }
+        
+        .wp-block-media-text .wp-block-media-text__content,
+        .wp-block-media-text .wp-block-media-text__media {
+            -ms-grid-row-align: center;
+            align-self: center
+        }
+        
+        .wp-block-media-text .wp-block-media-text__media {
+            /*!rtl:begin:ignore*/
+            -ms-grid-column: 1;
+            grid-column: 1;
+            -ms-grid-row: 1;
+            grid-row: 1;
+            /*!rtl:end:ignore*/
+            margin: 0
+        }
+        
+        .wp-block-media-text .wp-block-media-text__content {
+            direction: ltr;
+            /*!rtl:begin:ignore*/
+            -ms-grid-column: 2;
+            grid-column: 2;
+            -ms-grid-row: 1;
+            grid-row: 1;
+            /*!rtl:end:ignore*/
+            padding: 0 8%;
+            word-break: break-word
+        }
+        
+        .wp-block-media-text.has-media-on-the-right .wp-block-media-text__media {
+            /*!rtl:begin:ignore*/
+            -ms-grid-column: 2;
+            grid-column: 2;
+            -ms-grid-row: 1;
+            grid-row: 1
+        }
+        
+        .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+            /*!rtl:begin:ignore*/
+            -ms-grid-column: 1;
+            grid-column: 1;
+            -ms-grid-row: 1;
+            grid-row: 1
+        }
+        
+        .wp-block-media-text__media img,
+        .wp-block-media-text__media video {
+            max-width: unset;
+            width: 100%;
+            vertical-align: middle
+        }
+        
+        .wp-block-media-text.is-image-fill figure.wp-block-media-text__media {
+            height: 100%;
+            min-height: 250px;
+            background-size: cover
+        }
+        
+        .wp-block-media-text.is-image-fill figure.wp-block-media-text__media>img {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0
+        }
+        
+        .wp-block-navigation .wp-block-navigation-link:not(.has-text-color),
+        .wp-block-navigation.is-style-light .wp-block-navigation-link:not(.has-text-color) {
+            color: #1e1e1e
+        }
+        
+        .wp-block-navigation.is-style-light:not(.has-background) .wp-block-navigation__container,
+        .wp-block-navigation:not(.has-background) .wp-block-navigation__container {
+            background-color: #fff
+        }
+        
+        .wp-block-navigation.is-style-dark .wp-block-navigation-link:not(.has-text-color) {
+            color: #fff
+        }
+        
+        .wp-block-navigation.is-style-dark:not(.has-background) .wp-block-navigation__container {
+            background-color: #1e1e1e
+        }
+        
+        .wp-block-navigation-link {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin: 0
+        }
+        
+        .wp-block-navigation-link .wp-block-navigation__container:empty {
+            display: none
+        }
+        
+        .wp-block-navigation__container {
+            list-style: none;
+            margin: 0;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap
+        }
+        
+        .is-vertical .wp-block-navigation__container {
+            display: block
+        }
+        
+        .wp-block-navigation-link__content {
+            text-decoration: none;
+            padding: 8px 16px
+        }
+        
+        .wp-block-navigation-link__content+.wp-block-navigation-link__content {
+            padding-top: 0
+        }
+        
+        .has-text-color .wp-block-navigation-link__content {
+            color: inherit
+        }
+        
+        .wp-block-navigation-link__label {
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+            word-break: normal;
+            overflow-wrap: break-word
+        }
+        
+        .is-small-text {
+            font-size: 14px
+        }
+        
+        .is-regular-text {
+            font-size: 16px
+        }
+        
+        .is-large-text {
+            font-size: 36px
+        }
+        
+        .is-larger-text {
+            font-size: 48px
+        }
+        
+        p.has-background {
+            padding: 20px 38px
+        }
+        
+        p.has-text-color a {
+            color: inherit
+        }
+        
+        .wp-block-post-author {
+            display: flex;
+            flex-wrap: wrap;
+            line-height: 1.5
+        }
+        
+        .wp-block-post-author__avatar {
+            margin-right: 16px
+        }
+        
+        .wp-block-post-author__content {
+            flex-grow: 1;
+            flex-basis: 0
+        }
+        
+        .wp-block-post-author__name {
+            font-weight: 700;
+            margin: 0
+        }
+        
+        .wp-block-rss.is-grid {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            list-style: none
+        }
+        
+        .wp-block-rss.is-grid li {
+            margin: 0 16px 16px 0;
+            width: 100%
+        }
+        
+        .wp-block-rss__item-author {
+            display: block;
+            color: #6c7781;
+            font-size: 13px
+        }
+        
+        .wp-block-search {
+            display: flex;
+            flex-wrap: wrap
+        }
+        
+        .wp-block-search .wp-block-search__label {
+            width: 100%
+        }
+        
+        .wp-block-search .wp-block-search__input {
+            flex-grow: 1;
+            max-width: 360px
+        }
+        
+        .wp-block-search .wp-block-search__button {
+            margin-left: 10px
+        }
+        
+        .wp-block-video {
+            margin-left: 0;
+            margin-right: 0
+        }
+        
+        .wp-block-video video {
+            max-width: 100%
+        }
+        
+        @supports ((position:-webkit-sticky) or (position:sticky)) {
+            .wp-block-video [poster] {
+                object-fit: cover
+            }
+        }
+        
+         :root .has-white-background-color {
+            background-color: #fff
+        }
+        
+         :root .has-white-color {
+            color: #fff
+        }
+        
+         :root .has-link-color a {
+            color: #00e;
+            color: var(--wp--style--color--link, #00e)
+        }
+        
+        .has-small-font-size {
+            font-size: 13px
+        }
+        
+        .has-normal-font-size,
+        .has-regular-font-size {
+            font-size: 16px
+        }
+        
+        .has-large-font-size {
+            font-size: 36px
+        }
+        
+        .has-larger-font-size {
+            font-size: 42px
+        }
+        
+        .has-text-align-center {
+            text-align: center
+        }
+        
+        .has-text-align-left {
+            text-align: left
+        }
+        
+        .has-text-align-right {
+            text-align: right
+        }
+        
+        .wpcf7 .screen-reader-response {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 1px;
+            width: 1px;
+            margin: 0;
+            padding: 0;
+            border: 0
+        }
+        
+        .wpcf7-form-control-wrap {
+            position: relative
+        }
+        
+        span.wpcf7-list-item {
+            display: inline-block;
+            margin: 0 0 0 1em
+        }
+        
+        span.wpcf7-list-item-label::after,
+        span.wpcf7-list-item-label::before {
+            content: " "
+        }
+        
+        div.wpcf7 div.ajax-error {
+            display: none
+        }
+        
+        div.wpcf7 input[type=file] {
+            cursor: pointer
+        }
+        
+        div.wpcf7 input[type=file]:disabled {
+            cursor: default
+        }
+        
+        div.wpcf7 .wpcf7-submit:disabled {
+            cursor: not-allowed
+        }
+        
+        .wpcf7 input[type=email],
+        .wpcf7 input[type=tel],
+        .wpcf7 input[type=url] {
+            direction: ltr
+        }
+        /*!
+    </style>
+    <title>INGMAR &#8211; Movie News, Reviews, Blog and Database WordPress Theme</title>
+    <script type="text/javascript" id="wpuf-language-script">
+        var error_str_obj = {
+            'required': 'is required',
+            'mismatch': 'does not match',
+            'validation': 'is not valid'
+        }
+    </script>
+    <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+    <link rel='dns-prefetch' href='http://s.w.org/' />
+    <link rel="alternate" type="application/rss+xml" title="INGMAR &raquo; Feed" href="feed/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="INGMAR &raquo; Comments Feed" href="comments/feed/index.html" />
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "https:\/\/demo.ramsthemes.com\/projects\/ingmarwp\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.1"
+            }
+        };
+        ! function(e, a, t) {
+            var r, n, o, i, p = a.createElement("canvas"),
+                s = p.getContext && p.getContext("2d");
+
+            function c(e, t) {
+                var a = String.fromCharCode;
+                s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, e), 0, 0);
+                var r = p.toDataURL();
+                return s.clearRect(0, 0, p.width, p.height), s.fillText(a.apply(this, t), 0, 0), r === p.toDataURL()
+            }
+
+            function l(e) {
+                if (!s || !s.fillText) return !1;
+                switch (s.textBaseline = "top", s.font = "600 32px Arial", e) {
+                    case "flag":
+                        return !c([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) && (!c([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !c([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]));
+                    case "emoji":
+                        return !c([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212])
+                }
+                return !1
+            }
+
+            function d(e) {
+                var t = a.createElement("script");
+                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+            }
+            for (i = Array("flag", "emoji"), t.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, o = 0; o < i.length; o++) t.supports[i[o]] = l(i[o]), t.supports.everything = t.supports.everything && t.supports[i[o]], "flag" !== i[o] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[i[o]]);
+            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function() {
+                t.DOMReady = !0
+            }, t.supports.everything || (n = function() {
+                t.readyCallback()
+            }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+                "complete" === a.readyState && t.readyCallback()
+            })), (r = t.source || {}).concatemoji ? d(r.concatemoji) : r.wpemoji && r.twemoji && (d(r.twemoji), d(r.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <script src='wp-content/themes/ingmarwp/assets/js/jquery/jquery.min.js' id='jquery-js'></script>
+    <script type='text/javascript' id='wpuf-ajax-script-js-extra'>
+        /* <![CDATA[ */
+        var ajax_object = {
+            "ajaxurl": "https:\/\/demo.ramsthemes.com\/projects\/ingmarwp\/wp-admin\/admin-ajax.php",
+            "fill_notice": "Some Required Fields are not filled!"
+        };
+        /* ]]> */
+    </script>
+    <script src='wp-content/plugins/wp-user-frontend/assets/js/billing-addressd03b.js?ver=5.5.1' id='wpuf-ajax-script-js'></script>
+    <script src='wp-includes/js/jquery/ui/core.mine899.js?ver=1.11.4' id='jquery-ui-core-js'></script>
+    <script src='wp-includes/js/jquery/ui/datepicker.mine899.js?ver=1.11.4' id='jquery-ui-datepicker-js'></script>
+    <script src='wp-includes/js/jquery/ui/widget.mine899.js?ver=1.11.4' id='jquery-ui-widget-js'></script>
+    <script src='wp-includes/js/jquery/ui/mouse.mine899.js?ver=1.11.4' id='jquery-ui-mouse-js'></script>
+    <script src='wp-includes/js/plupload/moxie.mine34c.js?ver=1.3.5' id='moxiejs-js'></script>
+    <script src='wp-includes/js/plupload/plupload.min6c17.js?ver=2.1.9' id='plupload-js'></script>
+    <script type='text/javascript' id='plupload-handlers-js-extra'>
+        /* <![CDATA[ */
+        var pluploadL10n = {
+            "queue_limit_exceeded": "You have attempted to queue too many files.",
+            "file_exceeds_size_limit": "%s exceeds the maximum upload size for this site.",
+            "zero_byte_file": "This file is empty. Please try another.",
+            "invalid_filetype": "Sorry, this file type is not permitted for security reasons.",
+            "not_an_image": "This file is not an image. Please try another.",
+            "image_memory_exceeded": "Memory exceeded. Please try another smaller file.",
+            "image_dimensions_exceeded": "This is larger than the maximum size. Please try another.",
+            "default_error": "An error occurred in the upload. Please try again later.",
+            "missing_upload_url": "There was a configuration error. Please contact the server administrator.",
+            "upload_limit_exceeded": "You may only upload 1 file.",
+            "http_error": "Unexpected response from the server. The file may have been uploaded successfully. Check in the Media Library or reload the page.",
+            "http_error_image": "Post-processing of the image failed likely because the server is busy or does not have enough resources. Uploading a smaller image may help. Suggested maximum size is 2500 pixels.",
+            "upload_failed": "Upload failed.",
+            "big_upload_failed": "Please try uploading this file with the %1$sbrowser uploader%2$s.",
+            "big_upload_queued": "%s exceeds the maximum upload size for the multi-file uploader when used in your browser.",
+            "io_error": "IO error.",
+            "security_error": "Security error.",
+            "file_cancelled": "File canceled.",
+            "upload_stopped": "Upload stopped.",
+            "dismiss": "Dismiss",
+            "crunching": "Crunching\u2026",
+            "deleted": "moved to the Trash.",
+            "error_uploading": "\u201c%s\u201d has failed to upload.",
+            "unsupported_image": "This image cannot be displayed in a web browser. For best results convert it to JPEG before uploading."
+        };
+        /* ]]> */
+    </script>
+    <script src='wp-includes/js/plupload/handlers.mind03b.js?ver=5.5.1' id='plupload-handlers-js'></script>
+    <script src='wp-content/plugins/wp-user-frontend/assets/js/jquery-ui-timepicker-addond03b.js?ver=5.5.1' id='jquery-ui-timepicker-js'></script>
+    <script src='wp-includes/js/jquery/ui/sortable.mine899.js?ver=1.11.4' id='jquery-ui-sortable-js'></script>
+    <script type='text/javascript' id='wpuf-upload-js-extra'>
+        /* <![CDATA[ */
+        var wpuf_frontend_upload = {
+            "confirmMsg": "Are you sure?",
+            "delete_it": "Yes, delete it",
+            "cancel_it": "No, cancel it",
+            "nonce": "1dd1192f7c",
+            "ajaxurl": "https:\/\/demo.ramsthemes.com\/projects\/ingmarwp\/wp-admin\/admin-ajax.php",
+            "max_filesize": "1024M",
+            "plupload": {
+                "url": "https:\/\/demo.ramsthemes.com\/projects\/ingmarwp\/wp-admin\/admin-ajax.php?nonce=a6ec8bc0a8",
+                "flash_swf_url": "https:\/\/demo.ramsthemes.com\/projects\/ingmarwp\/wp-includes\/js\/plupload\/plupload.flash.swf",
+                "filters": [{
+                    "title": "Allowed Files",
+                    "extensions": "*"
+                }],
+                "multipart": true,
+                "urlstream_upload": true,
+                "warning": "Maximum number of files reached!",
+                "size_error": "The file you have uploaded exceeds the file size limit. Please try again.",
+                "type_error": "You have uploaded an incorrect file type. Please try again."
+            }
+        };
+        /* ]]> */
+    </script>
+    <script src='wp-content/plugins/wp-user-frontend/assets/js/uploadd03b.js?ver=5.5.1' id='wpuf-upload-js'></script>
+    <script type='text/javascript' id='wpuf-form-js-extra'>
+        /* <![CDATA[ */
+        var wpuf_frontend = {
+            "ajaxurl": "https:\/\/demo.ramsthemes.com\/projects\/ingmarwp\/wp-admin\/admin-ajax.php",
+            "error_message": "Please fix the errors to proceed",
+            "nonce": "1dd1192f7c",
+            "word_limit": "Word limit reached",
+            "cancelSubMsg": "Are you sure you want to cancel your current subscription ?",
+            "delete_it": "Yes",
+            "cancel_it": "No",
+            "coupon_error": "Please enter a coupon code!"
+        };
+        /* ]]> */
+    </script>
+    <script src='wp-content/plugins/wp-user-frontend/assets/js/frontend-form.mind03b.js?ver=5.5.1' id='wpuf-form-js'></script>
+    <script src='wp-content/plugins/wp-user-frontend/assets/vendor/sweetalert2/dist/sweetalert26b00.js?ver=3.4.0' id='wpuf-sweetalert2-js'></script>
+    <link rel="https://api.w.org/" href="wp-json/index.html" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.5.1" />
+    <link rel="icon" href="wp-content/uploads/2019/10/cropped-ingmar-logo-res-36x36.png" sizes="32x32" />
+    <link rel="icon" href="wp-content/uploads/2019/10/cropped-ingmar-logo-res-300x300.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="wp-content/uploads/2019/10/cropped-ingmar-logo-res-300x300.png" />
+    <meta name="msapplication-TileImage" content="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/cropped-ingmar-logo-res-300x300.png" />
+</head>
+
+<body class="home blog" id="loadfade">
+    <!-- Get navbar -->
+    <!-- Navbar -->
+    <nav class="fixed-header navbar navbar-height navbar-pos bg-navbar border-bottom">
+        <div class="navbar-container position-relative">
+            <!-- logo -->
+            <a class="navbar-logo-left" href="index.html">
+                <!-- display logo for normal mode -->
+                <img class="logo logow logores" src="wp-content/uploads/2019/10/ingmar-logo-a.svg" alt="Normal Mode Logo">
+                <!-- display logo for dark mode -->
+                <img class="logo logob logores" src="wp-content/uploads/2019/10/ingmar-logo-b.svg" alt="Dark Mode Logo">
+                <!-- display logo responsive for normal mode -->
+                <img class="logo logow d-lg-none" src="wp-content/uploads/2019/10/ingmar-logo-res.svg" alt="Normal Mode Logo">
+                <!-- display logo responsive for dark mode -->
+                <img class="logo logob d-lg-none" src="wp-content/uploads/2019/10/ingmar-logo-res.svg" alt="Dark Mode Logo">
+            </a>
+            <!-- icons on right -->
+            <div class="navbar-icons">
+                <!-- account menu right -->
+
+                <div class="d-inline-block">
+                    <label title="Register" class="mx-2">
+				<a href="registration/index.html"><i class="fas fa-user-plus fa-lg"></i></a>
+				</label>
+                    <label title="Login" class="mx-2">
+				<a href="login/index.html"><i class="fas fa-sign-in-alt fa-lg"></i></a>
+				</label>
+                </div>
+
+
+                <div class="navbar-box" id="topnav">
+                    <!-- display search modal button -->
+                    <label title="Open Search" class="mx-2">
+				<a href="#search"><i class="fas fa-search"></i></a>
+				</label>
+                    <!-- Switch mode -->
+                    <label for="mode" title="Switch Light/Dark mode" class="navbar-darkmode switch-checkbox icon-align-bottom mx-lg-1"><input id="mode" type="checkbox"><i class="fas fa-toggle-off fa-lg unchecked"></i><i class="fas fa-toggle-on fa-lg checked"></i></label>
+
+                </div>
+                <!-- account menu right -->
+                <!-- hamburger menu right -->
+                <div class="float-right my-3 d-inline-block d-lg-none">
+                    <div class="toggle-open-close-right"><i class="fas fa-bars fa-lg hamb-menu-right ml-2"></i></div>
+                </div>
+            </div>
+            <div id="search">
+                <button type="button" id="border-class" class="close" title="Close Search"></button>
+                <form role="search" id="searchform" class="position" action="https://demo.ramsthemes.com/projects/ingmarwp/" method="get">
+                    <input type="search" id="s" name="s" placeholder="What are you looking for?" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
+
+                    <div class="post-types">
+                        <div class="text-center mb-3">
+                            <input type="radio" name="post_type" value="post" checked><label class="mx-3">Posts</label>
+                            <input type="radio" name="post_type" value="reviews"><label class="mx-3">Reviews</label>
+                            <input type="radio" name="post_type" value="movies"><label class="mx-3">Movies</label>
+                        </div>
+                        <input type="submit" id="searchsubmit" class="btn btn-block btn-custom" value="Search" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- sidenav right (responsive) -->
+    <div id="ingmarwp-sidenav-right" class="sidenav-r bg-sidenav border-sidenav-left">
+        <div class="buttons-sidenav" id="topnav">
+            <!-- close sidenav button -->
+            <span title="Close Menu" class="closebtn toggle-open-close-right"><i class="fas fa-times fa-lg"></i></span>
+        </div>
+
+        <div class="sidenav-margin-top">
+            <div class="sidenav-nav-container">
+                <div id="nav_menu-2" class="widget_nav_menu mb-3">
+                    <div class="menu-sidenav-menu-container">
+                        <ul id="accordion-sidenav" class="menu">
+                            <li id="menu-item-242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-242 menu-hover"><a href="reviews/index.html">Reviews</a></li>
+                            <li id="menu-item-248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-parent-item menu-item-248 menu-hover"><a href="actors/index.html" class="parent">Actors</a>
+                                <div class='dropdown-sidenav-btn'><i class='far fa-dot-circle fa-lg'></i></div>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247 menu-hover"><a href="actors-a-z/index.html">Actors A-Z</a></li>
+                                    <li id="menu-item-252" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252 menu-hover"><a href="actors-a-z-filters/index.html">Actors A-Z &#8211; Filters</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550 menu-hover"><a href="directors/index.html">Directors</a></li>
+                            <li id="menu-item-241" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-241 menu-hover"><a href="movies/index.html">Movie Archive</a></li>
+                            <li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-parent-item menu-item-275 menu-hover"><a href="genres/index.html" class="parent">Genres</a>
+                                <div class='dropdown-sidenav-btn'><i class='far fa-dot-circle fa-lg'></i></div>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-276" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-276 menu-hover"><a href="genres/action/index.html">Action</a></li>
+                                    <li id="menu-item-277" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-277 menu-hover"><a href="genres/adventure/index.html">Adventure</a></li>
+                                    <li id="menu-item-278" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-278 menu-hover"><a href="genres/anime/index.html">Anime</a></li>
+                                    <li id="menu-item-279" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-279 menu-hover"><a href="genres/biography/index.html">Biography</a></li>
+                                    <li id="menu-item-280" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-280 menu-hover"><a href="genres/comedy/index.html">Comedy</a></li>
+                                    <li id="menu-item-281" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-281 menu-hover"><a href="genres/drama/index.html">Drama</a></li>
+                                    <li id="menu-item-282" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-282 menu-hover"><a href="genres/horror/index.html">Horror</a></li>
+                                    <li id="menu-item-283" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-283 menu-hover"><a href="genres/music/index.html">Music</a></li>
+                                    <li id="menu-item-284" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-284 menu-hover"><a href="genres/mystery/index.html">Mystery</a></li>
+                                    <li id="menu-item-285" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-285 menu-hover"><a href="genres/sci-fi/index.html">Sci-Fi</a></li>
+                                    <li id="menu-item-286" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-286 menu-hover"><a href="genres/sport/index.html">Sport</a></li>
+                                    <li id="menu-item-287" class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-287 menu-hover"><a href="genres/thriller/index.html">Thriller</a></li>
+                                </ul>
+                            </li>
+                            <li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 menu-hover"><a href="all-news/index.html">All News</a></li>
+                            <li id="menu-item-323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323 menu-hover"><a href="all-categories/index.html">All Categories</a></li>
+                            <li id="menu-item-386" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386 menu-hover"><a href="movie-posters/index.html">MOVIEFY</a></li>
+                            <li id="menu-item-269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269 menu-hover"><a href="page-example/index.html">Page example</a></li>
+                            <li id="menu-item-514" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514 menu-hover"><a href="page-example-2/index.html">Page example 2</a></li>
+                            <li id="menu-item-310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310 menu-hover"><a href="contact-page/index.html">Contact page</a></li>
+                            <li id="menu-item-272" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-272 menu-hover"><a href="error404.html">Error 404 Page</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- main container -->
+    <main class="pt-fixed">
+        <div class="container-general">
+
+            <div class="wrapper">
+                <!-- Sidenav -->
+                <nav id="sidebar" class="sidenav">
+                    <div data-simplebar class="navigation-sticky-top scrollbar-sidenav">
+                        <div class="sidenav-nav-container">
+                            <div id="nav_menu-2" class="widget_nav_menu mb-3">
+                                <div class="menu-sidenav-menu-container">
+                                    <ul id="accordion-sidenav" class="menu">
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-242 menu-hover"><a href="reviews/index.html">Reviews</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-parent-item menu-item-248 menu-hover"><a href="actors/index.html" class="parent">Actors</a>
+                                            <div class='dropdown-sidenav-btn'><i class='far fa-dot-circle fa-lg'></i></div>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247 menu-hover"><a href="actors-a-z/index.html">Actors A-Z</a></li>
+                                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-252 menu-hover"><a href="actors-a-z-filters/index.html">Actors A-Z &#8211; Filters</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550 menu-hover"><a href="directors/index.html">Directors</a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-241 menu-hover"><a href="movies/index.html">Movie Archive</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-parent-item menu-item-275 menu-hover"><a href="genres/index.html" class="parent">Genres</a>
+                                            <div class='dropdown-sidenav-btn'><i class='far fa-dot-circle fa-lg'></i></div>
+                                            <ul class="sub-menu">
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-276 menu-hover"><a href="genres/action/index.html">Action</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-277 menu-hover"><a href="genres/adventure/index.html">Adventure</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-278 menu-hover"><a href="genres/anime/index.html">Anime</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-279 menu-hover"><a href="genres/biography/index.html">Biography</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-280 menu-hover"><a href="genres/comedy/index.html">Comedy</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-281 menu-hover"><a href="genres/drama/index.html">Drama</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-282 menu-hover"><a href="genres/horror/index.html">Horror</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-283 menu-hover"><a href="genres/music/index.html">Music</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-284 menu-hover"><a href="genres/mystery/index.html">Mystery</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-285 menu-hover"><a href="genres/sci-fi/index.html">Sci-Fi</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-286 menu-hover"><a href="genres/sport/index.html">Sport</a></li>
+                                                <li class="menu-item menu-item-type-taxonomy menu-item-object-movie_genre menu-item-287 menu-hover"><a href="genres/thriller/index.html">Thriller</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331 menu-hover"><a href="all-news/index.html">All News</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323 menu-hover"><a href="all-categories/index.html">All Categories</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386 menu-hover"><a href="movie-posters/index.html">MOVIEFY</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269 menu-hover"><a href="page-example/index.html">Page example</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-514 menu-hover"><a href="page-example-2/index.html">Page example 2</a></li>
+                                        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-310 menu-hover"><a href="contact-page/index.html">Contact page</a></li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-272 menu-hover"><a href="error404.html">Error 404 Page</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div id="page-content-wrapper">
+                    <!-- Featured Slider -->
+
+
+                    <div class="col-12 my-3">
+                        <div class="slideout-heading">
+                            <div class="d-inline-block">
+                                <h5 class="home-slider-title-color">For you</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="carousel mb-3 w-100" data-flickity='{ "pageDots": false, "imagesLoaded": true, "prevNextButtons": true, "cellAlign": "left", "contain": true, "groupCells": true }'>
+
+                                <div class="col-12 col-lg-6 col-xl-4 p-3">
+                                    <div class="img__wrap">
+                                        <video class="img-fluid shadow-sm" height="120%" loading="lazy"> <source src="/11233_720p_sum.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="position-absolute bottom m-3 text-white">
+                                            <h5><a class="text-white" href="movie-posters/index.html">MOVIEFY - The ebook</a></h5>
+                                            <a href="movie-posters/index.html" class="btn btn-custom btn-sm">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-lg-6 col-xl-4 p-3">
+                                    <div class="img__wrap">
+                                        <video class="img-fluid shadow-sm" height="120%" loading="lazy"> <source src="/11233_720p_sum.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="position-absolute bottom m-3 text-white">
+                                            <h5><a class="text-white" href="movie-posters/index.html">MOVIEFY - The ebook</a></h5>
+                                            <a href="movie-posters/index.html" class="btn btn-custom btn-sm">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 col-xl-4 p-3">
+                                    <div class="img__wrap">
+                                        <video class="img-fluid shadow-sm" height="120%" loading="lazy"> <source src="/11233_720p_sum.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="position-absolute bottom m-3 text-white">
+                                            <h5><a class="text-white" href="movie-posters/index.html">MOVIEFY - The ebook</a></h5>
+                                            <a href="movie-posters/index.html" class="btn btn-custom btn-sm">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 col-xl-4 p-3">
+                                    <div class="img__wrap">
+                                        <video class="img-fluid shadow-sm" height="120%" loading="lazy"> <source src="/11233_720p_sum.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="position-absolute bottom m-3 text-white">
+                                            <h5><a class="text-white" href="movie-posters/index.html">MOVIEFY - The ebook</a></h5>
+                                            <a href="movie-posters/index.html" class="btn btn-custom btn-sm">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 col-xl-4 p-3">
+                                    <div class="img__wrap video_avaliable">
+                                        <video class="img-fluid shadow-sm preview_video" height="120%" loading="lazy"> <source src="/11233_720p_sum.mp4" type="video/mp4">
+                                        </video>
+                                        <div class="position-absolute bottom m-3 text-white">
+                                            <h5><a class="text-white" href="movie-posters/index.html">MOVIEFY - The ebook</a></h5>
+                                            <a href="movie-posters/index.html" class="btn btn-custom btn-sm">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-6 col-xl-4 p-3">
+                                    <div class="img__wrap">
+                                        <img class="img-fluid shadow-sm" src="wp-content/uploads/2020/02/vid2.jpg" loading="lazy" sizes="(max-width: 640px) 100vw, 640px" />
+                                        <div class="position-absolute bottom m-3 text-white">
+                                            <h5><a class="text-white" href="movie-posters/index.html">MOVIEFY - The ebook</a></h5>
+                                            <a href="movie-posters/index.html" class="btn btn-custom btn-sm">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-block d-xl-flex">
+                        <div class="col-12 col-xl-8">
+                            <div class="row">
+                                <div class="col-12 col-xl-6">
+                                    <!-- Selected articles -->
+                                    <div class="my-3">
+
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-1" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="everyone-loves-swallow/index.html">Everyone Loves Swallow</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="everyone-loves-swallow/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2020/05/swallow-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-500x323.jpeg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-1170x756.jpeg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>Covered parlors concern we express in visited to do. Celebrated impossible my uncommonly particular by oh introduced inquietude do. </p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="everyone-loves-swallow/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">May 27, 2020</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/film/index.html">Film</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="category/flick/index.html">Flick</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="tag/image/index.html">Image</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/nulla/index.html">Nulla</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/spectacle/index.html">Spectacle</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/haley-bennett/index.html">Haley Bennett</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-2" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="the-once-upon-a-time-in-hollywood-mystery/index.html">The Once Upon A Time In Hollywood Mystery</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="the-once-upon-a-time-in-hollywood-mystery/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-1170x756.jpg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>Prospect at me wandered on extended wondered thoughts appetite to. Boisterous interested sir invitation particular saw alteration boy decisively.</p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="the-once-upon-a-time-in-hollywood-mystery/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">February 15, 2020</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/celluloid/index.html">Celluloid</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="category/excepteur/index.html">Excepteur</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="category/videotape/index.html">Videotape</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/hollywood/index.html">Hollywood</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/play/index.html">Play</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/spectacle/index.html">Spectacle</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="actors/brad-pitt/index.html">Brad Pitt</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/leonardo-di-caprio/index.html">Leonardo Di Caprio</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="actors/margaret-qualley/index.html">Margaret Qualley</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/margot-robbie/index.html">Margot Robbie</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="directors/quentin-tarantino/index.html">Quentin Tarantino</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="directors/roman-polanski/index.html">Roman Polanski</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-3" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="fate-stay-night-on-a-budget/index.html">Fate Stay Night On A Budget</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="fate-stay-night-on-a-budget/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2008/09/heavensfeel-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-1170x756.jpg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>Amongst moments do in arrived at my replied. Fat weddings servants but man believed prospect. </p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="fate-stay-night-on-a-budget/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">September 8, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/photoplay/index.html">Photoplay</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/fate-stay-night/index.html">Fate Stay Night</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/type-moon/index.html">Type Moon</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/hiroshi-kamiya/index.html">Hiroshi Kamiya</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/mai-kadowaki/index.html">Mai Kadowaki</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/yu-asakawa/index.html">Yu Asakawa</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="directors/kinoko-nasu/index.html">Kinoko Nasu</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="directors/tomonori-sudo/index.html">Tomonori Sudô</a>                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-4" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="raw-grave-and-the-beauty-tastes/index.html">RAW / Grave and the beauty tastes</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="raw-grave-and-the-beauty-tastes/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2008/04/raw1-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/04/raw1-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/04/raw1-1170x756.jpg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>Done may bore quit evil old mile. If likely am of beauty tastes. </p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="raw-grave-and-the-beauty-tastes/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">August 22, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/cinematograph/index.html">Cinematograph</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="category/film/index.html">Film</a>
+                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/nulla/index.html">Nulla</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/nullam/index.html">Nullam</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-5" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="denis-villeneuve-impression-to-discretion/index.html">Denis Villeneuve Impression to discretion</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="denis-villeneuve-impression-to-discretion/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2008/08/denis-villeneuve-enemy-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-1170x756.jpg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>Impression to discretion understood to we interested he excellence. Him remarkably use projection collecting.</p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="denis-villeneuve-impression-to-discretion/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">August 8, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/film/index.html">Film</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="category/flick/index.html">Flick</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="tag/enchanted/index.html">Enchanted</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/mauris/index.html">Mauris</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/pageant/index.html">Pageant</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/play/index.html">Play</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/prisoners/index.html">Prisoners</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="actors/elizabeth-olsen/index.html">Elizabeth Olsen</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/jeremy-renner/index.html">Jeremy Renner</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="directors/denis-villeneuve/index.html">Denis Villeneuve</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-6" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="your-name-fortune-demands-highest-of/index.html">Your name fortune demands highest of</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="your-name-fortune-demands-highest-of/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2007/07/yourname-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="your-name-fortune-demands-highest-of/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">July 21, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/celluloid/index.html">Celluloid</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="category/cinema/index.html">Cinema</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="category/feature/index.html">Feature</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/nisi-turpis/index.html">Nisi turpis</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="tag/nulla/index.html">Nulla</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/spectacle/index.html">Spectacle</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/your-name/index.html">Your Name</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="directors/makoto-shinkai/index.html">Makoto Shinkai</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-7" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="blade-runner-extended-vicinity-subjects/index.html">Blade Runner extended vicinity subjects</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="blade-runner-extended-vicinity-subjects/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2008/07/blade-runner-2049-1366x768-harrison-ford-jared-leto-ryan-gosling-ana-10078-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/07/blade-runner-2049-1366x768-harrison-ford-jared-leto-ryan-gosling-ana-10078-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/07/blade-runner-2049-1366x768-harrison-ford-jared-leto-ryan-gosling-ana-10078-1170x756.jpg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>For norland produce age wishing. To figure on it spring season up. Her provision acuteness had excellent two why intention.</p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="blade-runner-extended-vicinity-subjects/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">July 8, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/screenplay/index.html">Screenplay</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="category/videotape/index.html">Videotape</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/blade-runner/index.html">Blade Runner</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/ana-de-armas/index.html">Ana de Armas</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/ryan-gosling/index.html">Ryan Gosling</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="directors/denis-villeneuve/index.html">Denis Villeneuve</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="directors/ridley-scott/index.html">Ridley Scott</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-8" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="uma-thurman-morning-request/index.html">Uma Thurman Morning request</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="uma-thurman-morning-request/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2019/10/kill-bill-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>Education no dejection so direction pretended household do to.</p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="uma-thurman-morning-request/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">June 21, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/celluloid/index.html">Celluloid</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/logical/index.html">Logical</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="actors/uma-thurman/index.html">Uma Thurman</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-9" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="the-ad-astra-astonished-set-expression/index.html">The Ad Astra Astonished set expression</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="the-ad-astra-astonished-set-expression/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2008/06/Ad_Astra-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/06/Ad_Astra-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/06/Ad_Astra-1170x756.jpg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="the-ad-astra-astonished-set-expression/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">June 8, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/photoplay/index.html">Photoplay</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="category/videotape/index.html">Videotape</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/ad-astra/index.html">Ad Astra</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/light/index.html">Light</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="tag/spectacle/index.html">Spectacle</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/brad-pitt/index.html">Brad Pitt</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-10" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="quentin-tarantino-no-peculiar-in-handsome-together-unlocked-do-by/index.html">Quentin Tarantino no peculiar in handsome together unlocked do by</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="quentin-tarantino-no-peculiar-in-handsome-together-unlocked-do-by/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2019/04/quentin-tarantino-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/04/quentin-tarantino-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/04/quentin-tarantino-1170x756.jpg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>No peculiar in handsome together unlocked do by.</p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="quentin-tarantino-no-peculiar-in-handsome-together-unlocked-do-by/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">April 28, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/videotape/index.html">Videotape</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/nulla/index.html">Nulla</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="tag/silver-screen/index.html">Silver Screen</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/spectacle/index.html">Spectacle</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="tag/talkie/index.html">Talkie</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="directors/quentin-tarantino/index.html">Quentin Tarantino</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-11" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="crimson-peak-possession-the-unpleasing-simplicity/index.html">Crimson Peak Possession the unpleasing simplicity</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="crimson-peak-possession-the-unpleasing-simplicity/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2008/03/crimson-peak-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/03/crimson-peak-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/03/crimson-peak-1170x756.jpg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>Possession the unpleasing simplicity her uncommonly.</p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="crimson-peak-possession-the-unpleasing-simplicity/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">March 17, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/celluloid/index.html">Celluloid</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="category/videotape/index.html">Videotape</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/mauris/index.html">Mauris</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/production/index.html">Production</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="tag/vast/index.html">Vast</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/jessica-chastain/index.html">Jessica Chastain</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="actors/mia-wasikowska/index.html">Mia Wasikowska</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/tom-hiddleston/index.html">Tom Hiddleston</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="directors/guillermo-del-toro/index.html">Guillermo del Toro</a> </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="ModalCenter-12" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content border-class shadow">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title"><a href="joker-literature-sentiments/index.html">Joker literature sentiments</a></h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							  <div aria-hidden="true"><i class="fas fa-times"></i></div>
+							</button>
+                                                    </div>
+                                                    <picture>
+                                                        <a href="joker-literature-sentiments/index.html">
+                                                            <img width="500" height="323" src="wp-content/uploads/2008/02/joker-500x323.jpg" class="img-res wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/02/joker-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/02/joker-1170x756.jpg 1170w"
+                                                                sizes="(max-width: 500px) 100vw, 500px" /> </a>
+                                                    </picture>
+                                                    <div class="modal-body">
+                                                        <!-- opened menu -->
+                                                        <div class="mx-2">
+                                                            <div class="post-text-content noto-serif mb-3">
+                                                                <p>Supposing shameless am he engrossed up additions.</p>
+                                                            </div>
+                                                            <div class="my-2">
+                                                                <a class="btn btn-custom btn-block btn-sm mr-2 mb-2" href="joker-literature-sentiments/index.html">
+                                                                    <i class="fas fa-align-justify mr-1"></i> Full Read </a>
+                                                            </div>
+                                                            <small class="text-uppercase my-3">February 20, 2019</small>
+                                                            <h6 class="taglist">In this post: </h6>
+                                                            <div class='my-3'>
+                                                                <div class='d-inline scroll pt-2'><a class="btn btn-custom btn-sm mr-2 mb-2" href="category/celluloid/index.html">Celluloid</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/act/index.html">Act</a> <a class="btn btn-custom btn-sm mr-2 mb-2"
+                                                                        href="tag/entertainment/index.html">Entertainment</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/joker/index.html">Joker</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/logical/index.html">Logical</a>                                                                    <a class="btn btn-custom btn-sm mr-2 mb-2" href="tag/nisi-turpis/index.html">Nisi turpis</a> <a class="btn btn-custom btn-sm mr-2 mb-2" href="actors/joaquin-phoenix/index.html">Joaquin Phoenix</a>                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slideout-heading">
+                                            <div class="d-inline-block">
+                                                <h5 class="latest-articles-title-color">Latest articles</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="carousel py-3 w-100" data-flickity='{ "pageDots": false, "imagesLoaded": true, "prevNextButtons": true, "cellAlign": "left", "contain": true, "groupCells": true }'>
+                                                <!-- /* First slide */ -->
+                                                <div class="d-flex w-100">
+                                                    <div class="col-8">
+
+
+                                                        <div class="img__wrap">
+                                                            <img width="450" height="450" src="wp-content/uploads/2020/05/swallow-450x450.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-450x450.jpeg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-150x150.jpeg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-36x36.jpeg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-300x300.jpeg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-600x600.jpeg 600w"
+                                                                sizes="(max-width: 450px) 100vw, 450px" />
+                                                            <a href="everyone-loves-swallow/index.html" class="imageoutlink" data-toggle="modal" data-target="#ModalCenter-1"></a>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="col-4">
+
+
+                                                        <div class="d-block featured-grid-mb">
+                                                            <div class="img__wrap">
+                                                                <img width="150" height="150" src="wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-600x600.jpg 600w"
+                                                                    sizes="(max-width: 150px) 100vw, 150px" />
+                                                                <a href="the-once-upon-a-time-in-hollywood-mystery/index.html" class="imageoutlink" data-toggle="modal" data-target="#ModalCenter-2"></a>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="d-block featured-grid-mb">
+                                                            <div class="img__wrap">
+                                                                <img width="150" height="150" src="wp-content/uploads/2008/09/heavensfeel-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-600x600.jpg 600w"
+                                                                    sizes="(max-width: 150px) 100vw, 150px" />
+                                                                <a href="fate-stay-night-on-a-budget/index.html" class="imageoutlink" data-toggle="modal" data-target="#ModalCenter-3"></a>
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <!-- /* Second slide */ -->
+                                                <div class="d-flex w-100">
+
+                                                    <div class="col-4">
+                                                        <div class="d-block featured-grid-mb">
+                                                            <div class="img__wrap">
+                                                                <img width="150" height="150" src="wp-content/uploads/2008/04/raw1-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/04/raw1-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/04/raw1-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/04/raw1-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/04/raw1-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/04/raw1-600x600.jpg 600w"
+                                                                    sizes="(max-width: 150px) 100vw, 150px" />
+                                                                <a href="raw-grave-and-the-beauty-tastes/index.html" class="imageoutlink" data-toggle="modal" data-target="#ModalCenter-4"></a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- changed == 0 to != 0  -->
+
+
+                                                        <div class="d-block featured-grid-mb">
+                                                            <div class="img__wrap">
+                                                                <img width="150" height="150" src="wp-content/uploads/2008/08/denis-villeneuve-enemy-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-600x600.jpg 600w"
+                                                                    sizes="(max-width: 150px) 100vw, 150px" />
+                                                                <a href="denis-villeneuve-impression-to-discretion/index.html" class="imageoutlink" data-toggle="modal" data-target="#ModalCenter-5"></a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- changed == 0 to != 0  -->
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <div class="d-block featured-grid-mb">
+                                                            <div class="img__wrap">
+                                                                <img width="150" height="150" src="wp-content/uploads/2007/07/yourname-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2007/07/yourname-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2007/07/yourname-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2007/07/yourname-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2007/07/yourname-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2007/07/yourname-600x600.jpg 600w"
+                                                                    sizes="(max-width: 150px) 100vw, 150px" />
+                                                                <a href="your-name-fortune-demands-highest-of/index.html" class="imageoutlink" data-toggle="modal" data-target="#ModalCenter-6"></a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- changed == 0 to != 0  -->
+
+
+                                                        <div class="d-block featured-grid-mb">
+                                                            <div class="img__wrap">
+                                                                <img width="150" height="150" src="wp-content/uploads/2008/07/blade-runner-2049-1366x768-harrison-ford-jared-leto-ryan-gosling-ana-10078-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/07/blade-runner-2049-1366x768-harrison-ford-jared-leto-ryan-gosling-ana-10078-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/07/blade-runner-2049-1366x768-harrison-ford-jared-leto-ryan-gosling-ana-10078-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/07/blade-runner-2049-1366x768-harrison-ford-jared-leto-ryan-gosling-ana-10078-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/07/blade-runner-2049-1366x768-harrison-ford-jared-leto-ryan-gosling-ana-10078-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/07/blade-runner-2049-1366x768-harrison-ford-jared-leto-ryan-gosling-ana-10078-600x600.jpg 600w"
+                                                                    sizes="(max-width: 150px) 100vw, 150px" />
+                                                                <a href="blade-runner-extended-vicinity-subjects/index.html" class="imageoutlink" data-toggle="modal" data-target="#ModalCenter-7"></a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- changed == 0 to != 0  -->
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <div class="d-block featured-grid-mb">
+                                                            <div class="img__wrap">
+                                                                <img width="150" height="150" src="wp-content/uploads/2019/10/kill-bill-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-600x600.jpg 600w"
+                                                                    sizes="(max-width: 150px) 100vw, 150px" />
+                                                                <a href="uma-thurman-morning-request/index.html" class="imageoutlink" data-toggle="modal" data-target="#ModalCenter-8"></a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- changed == 0 to != 0  -->
+
+
+                                                        <div class="d-block featured-grid-mb">
+                                                            <div class="img__wrap">
+                                                                <img width="150" height="150" src="wp-content/uploads/2008/06/Ad_Astra-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/06/Ad_Astra-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/06/Ad_Astra-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/06/Ad_Astra-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/06/Ad_Astra-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/06/Ad_Astra-600x600.jpg 600w"
+                                                                    sizes="(max-width: 150px) 100vw, 150px" />
+                                                                <a href="the-ad-astra-astonished-set-expression/index.html" class="imageoutlink" data-toggle="modal" data-target="#ModalCenter-9"></a>
+                                                            </div>
+                                                        </div>
+                                                        <!-- changed == 0 to != 0  -->
+                                                    </div>
+
+
+                                                    <!-- added closing </div> for odd number of posts -->
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-6">
+                                    <!-- Selected categories -->
+                                    <div class="my-3">
+                                        <div class="slideout-heading">
+                                            <div class="d-inline-block">
+                                                <h5 class="feat-categories-title-color">Featured categories</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="carousel w-100" data-flickity='{ "pageDots": false, "imagesLoaded": true, "prevNextButtons": true, "cellAlign": "left", "contain": true, "groupCells": true }'>
+
+                                                <div class="col-6 col-xl-12 py-3">
+                                                    <div class="img__wrap">
+
+
+                                                        <img class="img-fluid shadow-sm" src="wp-content/uploads/2020/02/category8-01-500x323.jpg" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category8-01-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category8-01-1170x756.jpg 1170w"
+                                                            sizes="(max-width: 640px) 100vw, 640px" />
+                                                        <a href="category/tv-shows/index.html" class="imageoutlink"></a>
+                                                        <div class="txt p-3">
+                                                            <h5><a href="category/tv-shows/index.html">TV Shows</a></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 col-xl-12 py-3">
+                                                    <div class="img__wrap">
+
+
+                                                        <img class="img-fluid shadow-sm" src="wp-content/uploads/2020/02/category7-01-500x323.jpg" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category7-01-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category7-01-1170x756.jpg 1170w"
+                                                            sizes="(max-width: 640px) 100vw, 640px" />
+                                                        <a href="category/photoplay/index.html" class="imageoutlink"></a>
+                                                        <div class="txt p-3">
+                                                            <h5><a href="category/photoplay/index.html">Photoplay</a></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 col-xl-12 py-3">
+                                                    <div class="img__wrap">
+
+
+                                                        <img class="img-fluid shadow-sm" src="wp-content/uploads/2020/02/category1-01-500x323.jpg" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category1-01-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category1-01-1170x756.jpg 1170w"
+                                                            sizes="(max-width: 640px) 100vw, 640px" />
+                                                        <a href="category/cinema/index.html" class="imageoutlink"></a>
+                                                        <div class="txt p-3">
+                                                            <h5><a href="category/cinema/index.html">Cinema</a></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 col-xl-12 py-3">
+                                                    <div class="img__wrap">
+
+
+                                                        <img class="img-fluid shadow-sm" src="wp-content/uploads/2020/02/category2-01-500x323.jpg" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category2-01-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category2-01-1170x756.jpg 1170w"
+                                                            sizes="(max-width: 640px) 100vw, 640px" />
+                                                        <a href="category/feature/index.html" class="imageoutlink"></a>
+                                                        <div class="txt p-3">
+                                                            <h5><a href="category/feature/index.html">Feature</a></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 col-xl-12 py-3">
+                                                    <div class="img__wrap">
+
+
+                                                        <img class="img-fluid shadow-sm" src="wp-content/uploads/2020/02/category3-01-500x323.jpg" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category3-01-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category3-01-1170x756.jpg 1170w"
+                                                            sizes="(max-width: 640px) 100vw, 640px" />
+                                                        <a href="category/film/index.html" class="imageoutlink"></a>
+                                                        <div class="txt p-3">
+                                                            <h5><a href="category/film/index.html">Film</a></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 col-xl-12 py-3">
+                                                    <div class="img__wrap">
+
+
+                                                        <img class="img-fluid shadow-sm" src="wp-content/uploads/2020/02/category4-01-500x323.jpg" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category4-01-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category4-01-1170x756.jpg 1170w"
+                                                            sizes="(max-width: 640px) 100vw, 640px" />
+                                                        <a href="category/picture/index.html" class="imageoutlink"></a>
+                                                        <div class="txt p-3">
+                                                            <h5><a href="category/picture/index.html">Picture</a></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 col-xl-12 py-3">
+                                                    <div class="img__wrap">
+
+
+                                                        <img class="img-fluid shadow-sm" src="wp-content/uploads/2020/02/category5-01-500x323.jpg" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category5-01-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category5-01-1170x756.jpg 1170w"
+                                                            sizes="(max-width: 640px) 100vw, 640px" />
+                                                        <a href="category/celluloid/index.html" class="imageoutlink"></a>
+                                                        <div class="txt p-3">
+                                                            <h5><a href="category/celluloid/index.html">Celluloid</a></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-6 col-xl-12 py-3">
+                                                    <div class="img__wrap">
+
+
+                                                        <img class="img-fluid shadow-sm" src="wp-content/uploads/2020/02/category6-01-500x323.jpg" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category6-01-500x323.jpg 500w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/category6-01-1170x756.jpg 1170w"
+                                                            sizes="(max-width: 640px) 100vw, 640px" />
+                                                        <a href="category/videotape/index.html" class="imageoutlink"></a>
+                                                        <div class="txt p-3">
+                                                            <h5><a href="category/videotape/index.html">Videotape</a></h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <!-- Featured reviews -->
+                                    <div class="my-3">
+                                        <div class="slideout-heading">
+                                            <div class="d-inline-block">
+                                                <h5 class="feat-reviews-title-color">Featured Reviews</h5>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="carousel mb-3 w-100" data-flickity='{ "pageDots": false, "imagesLoaded": true, "prevNextButtons": true, "cellAlign": "left", "contain": true, "groupCells": true, "adaptiveHeight": true }'>
+
+
+                                                <div class="col-12 p-3">
+                                                    <div class="d-block d-xl-flex border-class">
+                                                        <div class="reviews-half review-first-half float-left">
+                                                            <div class="img__wrap">
+                                                                <img width="1170" height="756" src="wp-content/uploads/2020/02/y1_cage_joe_12102017_bs_244-1-1170x756.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/y1_cage_joe_12102017_bs_244-1-1170x756.jpeg 1170w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/y1_cage_joe_12102017_bs_244-1-500x323.jpeg 500w"
+                                                                    sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                                <a href="reviews/you-season-2/index.html" class="imageoutlink"></a>
+                                                                <div class="position-absolute right top p-3">
+                                                                    <div class="d-flex">
+                                                                        <div class="rating-boxes border-class bg-success">
+                                                                            <div class="review-boxes-content">
+                                                                                <div class="ratenumber">4</div>
+                                                                                <div class="d-inline-block">/5</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reviews-half float-right">
+                                                            <div class="px-2 py-3">
+                                                                <a href="reviews/you-season-2/index.html">
+                                                                    <h5>YOU Season 2</h5>
+                                                                </a>
+                                                                <small class="d-block text-uppercase my-3">
+					February 15, 2020					</small>
+                                                                <div class="post-text-content my-3">
+                                                                    <p>Case read they must it of cold that. Speaking trifling an to unpacked moderate debating learning. An particular contrasted he excellence favourable on. Nay preference dispatched difficulty
+                                                                        continuing joy one.</p>
+                                                                </div>
+
+
+                                                                <div class="py-2">
+                                                                    <div class="float-left mr-2">
+                                                                        <img alt="" src="wp-content/uploads/2019/10/olena-sergienko-XttWKETqCCQ-unsplash-150x150.jpg" class="shadow-sm avatar avatar-36" height="36" width="36" /> </div>
+                                                                    <div class="review-author-list-name">By <a href="author/stephaniejacoby/index.html" title="Posts by Stephanie Jacoby" rel="author">Stephanie Jacoby</a></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12 p-3">
+                                                    <div class="d-block d-xl-flex border-class">
+                                                        <div class="reviews-half review-first-half float-left">
+                                                            <div class="img__wrap">
+                                                                <img width="1170" height="756" src="wp-content/uploads/2020/02/starfish2019-1170x756.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/starfish2019-1170x756.jpeg 1170w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/starfish2019-500x323.jpeg 500w"
+                                                                    sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                                <a href="reviews/starfish-settling-felicity/index.html" class="imageoutlink"></a>
+                                                                <div class="position-absolute right top p-3">
+                                                                    <div class="d-flex">
+                                                                        <div class="rating-boxes border-class bg-warning">
+                                                                            <div class="review-boxes-content">
+                                                                                <div class="ratenumber">3</div>
+                                                                                <div class="d-inline-block">/5</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reviews-half float-right">
+                                                            <div class="px-2 py-3">
+                                                                <a href="reviews/starfish-settling-felicity/index.html">
+                                                                    <h5>STARFISH settling felicity</h5>
+                                                                </a>
+                                                                <small class="d-block text-uppercase my-3">
+					February 15, 2020					</small>
+                                                                <div class="post-text-content my-3">
+                                                                    <p>In entirely be to at settling felicity. Fruit two match men you seven share. Needed as or is enough points. Miles at smart ﻿no marry whole linen mr. Income joy nor can wisdom summer.
+                                                                        Extremely depending he gentleman improving intention rapturous as. </p>
+                                                                </div>
+
+
+                                                                <div class="py-2">
+                                                                    <div class="float-left mr-2">
+                                                                        <img alt="" src="wp-content/uploads/2019/10/harishan-kobalasingam-8PMvB4VyVXA-unsplash-150x150.jpg" class="shadow-sm avatar avatar-36" height="36" width="36" /> </div>
+                                                                    <div class="review-author-list-name">By <a href="author/johnhamilton/index.html" title="Posts by John Hamilton" rel="author">John Hamilton</a></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12 p-3">
+                                                    <div class="d-block d-xl-flex border-class">
+                                                        <div class="reviews-half review-first-half float-left">
+                                                            <div class="img__wrap">
+                                                                <img width="1170" height="756" src="wp-content/uploads/2019/10/maniac-1170x756.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/maniac-1170x756.jpg 1170w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/maniac-500x323.jpg 500w"
+                                                                    sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                                <a href="reviews/maniac/index.html" class="imageoutlink"></a>
+                                                                <div class="position-absolute right top p-3">
+                                                                    <div class="d-flex">
+                                                                        <div class="rating-boxes border-class bg-warning">
+                                                                            <div class="review-boxes-content">
+                                                                                <div class="ratenumber">3.5</div>
+                                                                                <div class="d-inline-block">/5</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reviews-half float-right">
+                                                            <div class="px-2 py-3">
+                                                                <a href="reviews/maniac/index.html">
+                                                                    <h5>MANIAC</h5>
+                                                                </a>
+                                                                <small class="d-block text-uppercase my-3">
+					October 21, 2019					</small>
+                                                                <div class="post-text-content my-3">
+                                                                    <p>Frequently partiality possession resolution at or appearance unaffected.</p>
+                                                                </div>
+
+
+                                                                <div class="py-2">
+                                                                    <div class="float-left mr-2">
+                                                                        <img alt="" src="wp-content/uploads/2019/10/olena-sergienko-XttWKETqCCQ-unsplash-150x150.jpg" class="shadow-sm avatar avatar-36" height="36" width="36" /> </div>
+                                                                    <div class="review-author-list-name">By <a href="author/stephaniejacoby/index.html" title="Posts by Stephanie Jacoby" rel="author">Stephanie Jacoby</a></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12 p-3">
+                                                    <div class="d-block d-xl-flex border-class">
+                                                        <div class="reviews-half review-first-half float-left">
+                                                            <div class="img__wrap">
+                                                                <img width="1170" height="756" src="wp-content/uploads/2019/10/endgame-1170x756.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/endgame-1170x756.jpg 1170w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/endgame-500x323.jpg 500w"
+                                                                    sizes="(max-width: 1170px) 100vw, 1170px" />
+                                                                <a href="reviews/avengers-endgame/index.html" class="imageoutlink"></a>
+                                                                <div class="position-absolute right top p-3">
+                                                                    <div class="d-flex">
+                                                                        <div class="rating-boxes border-class bg-danger">
+                                                                            <div class="review-boxes-content">
+                                                                                <div class="ratenumber">2.5</div>
+                                                                                <div class="d-inline-block">/5</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reviews-half float-right">
+                                                            <div class="px-2 py-3">
+                                                                <a href="reviews/avengers-endgame/index.html">
+                                                                    <h5>Avengers: Endgame</h5>
+                                                                </a>
+                                                                <small class="d-block text-uppercase my-3">
+					October 21, 2019					</small>
+                                                                <div class="post-text-content my-3">
+                                                                    <p>Moment an little remain no up lively no. Way brought may off our regular country towards adapted cheered.
+                                                                    </p>
+                                                                </div>
+
+
+                                                                <div class="py-2">
+                                                                    <div class="float-left mr-2">
+                                                                        <img alt="" src="wp-content/uploads/2019/10/harishan-kobalasingam-8PMvB4VyVXA-unsplash-150x150.jpg" class="shadow-sm avatar avatar-36" height="36" width="36" /> </div>
+                                                                    <div class="review-author-list-name">By <a href="author/johnhamilton/index.html" title="Posts by John Hamilton" rel="author">John Hamilton</a></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12 p-3">
+                                                    <div class="d-block d-xl-flex border-class">
+                                                        <div class="reviews-half review-first-half float-left">
+                                                            <div class="img__wrap">
+                                                                <img width="1170" height="736" src="wp-content/uploads/2019/10/lalaland02-1170x736.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" />
+                                                                <a href="reviews/la-la-land-pressed-be-so-thought-natural/index.html" class="imageoutlink"></a>
+                                                                <div class="position-absolute right top p-3">
+                                                                    <div class="d-flex">
+                                                                        <div class="rating-boxes border-class bg-success">
+                                                                            <div class="review-boxes-content">
+                                                                                <div class="ratenumber">4.5</div>
+                                                                                <div class="d-inline-block">/5</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="reviews-half float-right">
+                                                            <div class="px-2 py-3">
+                                                                <a href="reviews/la-la-land-pressed-be-so-thought-natural/index.html">
+                                                                    <h5>La La Land pressed be so thought natural</h5>
+                                                                </a>
+                                                                <small class="d-block text-uppercase my-3">
+					October 21, 2019					</small>
+                                                                <div class="post-text-content my-3">
+                                                                    <p>Do enjoyment defective objection or we if favourite. At wonder afford so danger cannot former seeing. Power visit charm money add heard new other put. Attended no indulged marriage is
+                                                                        to judgment offering landlord.</p>
+                                                                </div>
+
+
+                                                                <div class="py-2">
+                                                                    <div class="float-left mr-2">
+                                                                        <img alt="" src="wp-content/uploads/2019/10/olena-sergienko-XttWKETqCCQ-unsplash-150x150.jpg" class="shadow-sm avatar avatar-36" height="36" width="36" /> </div>
+                                                                    <div class="review-author-list-name">By <a href="author/stephaniejacoby/index.html" title="Posts by Stephanie Jacoby" rel="author">Stephanie Jacoby</a></div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-4">
+                            <!-- Popular articles -->
+                            <div class="my-3">
+                                <div class="slideout-heading">
+                                    <div class="d-inline-block">
+                                        <h5 class="popular-reads-title-color">Popular reads</h5>
+                                    </div>
+                                </div>
+                                <div class="my-3">
+
+                                    <div class="row featured-grid-mb">
+                                        <div class="col-4">
+                                            <a href="fate-stay-night-on-a-budget/index.html">
+                                                <img width="150" height="150" src="wp-content/uploads/2008/09/heavensfeel-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/09/heavensfeel-600x600.jpg 600w"
+                                                    sizes="(max-width: 150px) 100vw, 150px" /> </a>
+                                        </div>
+                                        <div class="col py-1">
+                                            <h6><a href="fate-stay-night-on-a-budget/index.html">Fate Stay Night On A Budget</a></h6>
+                                            <small class="text-uppercase d-block">September 8, 2019</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="row featured-grid-mb">
+                                        <div class="col-4">
+                                            <a href="everyone-loves-swallow/index.html">
+                                                <img width="150" height="150" src="wp-content/uploads/2020/05/swallow-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-150x150.jpeg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-36x36.jpeg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-300x300.jpeg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-450x450.jpeg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/swallow-600x600.jpeg 600w"
+                                                    sizes="(max-width: 150px) 100vw, 150px" /> </a>
+                                        </div>
+                                        <div class="col py-1">
+                                            <h6><a href="everyone-loves-swallow/index.html">Everyone Loves Swallow</a></h6>
+                                            <small class="text-uppercase d-block">May 27, 2020</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="row featured-grid-mb">
+                                        <div class="col-4">
+                                            <a href="denis-villeneuve-impression-to-discretion/index.html">
+                                                <img width="150" height="150" src="wp-content/uploads/2008/08/denis-villeneuve-enemy-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2008/08/denis-villeneuve-enemy-600x600.jpg 600w"
+                                                    sizes="(max-width: 150px) 100vw, 150px" /> </a>
+                                        </div>
+                                        <div class="col py-1">
+                                            <h6><a href="denis-villeneuve-impression-to-discretion/index.html">Denis Villeneuve Impression to discretion</a></h6>
+                                            <small class="text-uppercase d-block">August 8, 2019</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="row featured-grid-mb">
+                                        <div class="col-4">
+                                            <a href="the-once-upon-a-time-in-hollywood-mystery/index.html">
+                                                <img width="150" height="150" src="wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/02/Leonardo_DiCaprio_Brad_Pitt_Men_Once_Upon_A_Time_568252_1920x1080-600x600.jpg 600w"
+                                                    sizes="(max-width: 150px) 100vw, 150px" /> </a>
+                                        </div>
+                                        <div class="col py-1">
+                                            <h6><a href="the-once-upon-a-time-in-hollywood-mystery/index.html">The Once Upon A Time In Hollywood Mystery</a></h6>
+                                            <small class="text-uppercase d-block">February 15, 2020</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="row featured-grid-mb">
+                                        <div class="col-4">
+                                            <a href="uma-thurman-morning-request/index.html">
+                                                <img width="150" height="150" src="wp-content/uploads/2019/10/kill-bill-150x150.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-150x150.jpg 150w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-36x36.jpg 36w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-300x300.jpg 300w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-450x450.jpg 450w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/kill-bill-600x600.jpg 600w"
+                                                    sizes="(max-width: 150px) 100vw, 150px" /> </a>
+                                        </div>
+                                        <div class="col py-1">
+                                            <h6><a href="uma-thurman-morning-request/index.html">Uma Thurman Morning request</a></h6>
+                                            <small class="text-uppercase d-block">June 21, 2019</small>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Movies slider -->
+
+
+                    <div class="col-12 my-3">
+                        <div class="slideout-heading">
+                            <div class="d-inline-block">
+                                <h5 class="feat-movies-title-color">New movies in Archive</h5>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="carousel home-movies-sld mb-3 w-100" data-flickity='{ "pageDots": false, "imagesLoaded": true, "prevNextButtons": true, "cellAlign": "left", "contain": true, "groupCells": true }'>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/lalaland-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/lalaland-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/lalaland-200x300.jpg 200w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/lalaland-682x1024.jpg 682w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/lalaland-768x1153.jpg 768w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/lalaland-600x900.jpg 600w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/lalaland.jpg 1022w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/la-la-land/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/la-la-land/index.html">La La Land</a></h6>
+                                        <small>2016</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/BladeRunner2049-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/BladeRunner2049-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/BladeRunner2049-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/blade-runner-2049/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/blade-runner-2049/index.html">Blade Runner 2049</a></h6>
+                                        <small>2017</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/whiplash-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/whiplash-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/whiplash-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/whiplash/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/whiplash/index.html">Whiplash</a></h6>
+                                        <small>2014</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2020/05/Swallow-large-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/Swallow-large-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2020/05/Swallow-large-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/swallow/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/swallow/index.html">Swallow</a></h6>
+                                        <small>2019</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/alien-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/alien-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/alien-200x300.jpg 200w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/alien-683x1024.jpg 683w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/alien-768x1152.jpg 768w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/alien-600x900.jpg 600w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/alien.jpg 835w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/alien/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/alien/index.html">Alien</a></h6>
+                                        <small>1979</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/captain-marvel-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/captain-marvel-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/captain-marvel-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/captain-marvel/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/captain-marvel/index.html">Captain Marvel</a></h6>
+                                        <small>2019</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/prisoners-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/prisoners-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/prisoners-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/prisoners/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/prisoners/index.html">Prisoners</a></h6>
+                                        <small>2013</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/rosemary-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/rosemary-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/rosemary-200x300.jpg 200w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/rosemary-683x1024.jpg 683w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/rosemary-768x1152.jpg 768w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/rosemary-600x900.jpg 600w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/rosemary.jpg 1000w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/rosemarys-baby/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/rosemarys-baby/index.html">Rosemary&#8217;s Baby</a></h6>
+                                        <small>1968</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/fateheaven204-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/fateheaven204-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/fateheaven204-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/fate-stay-night-heavens-feel-ii-lost-butterfly/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/fate-stay-night-heavens-feel-ii-lost-butterfly/index.html">Fate/Stay Night: Heaven&#8217;s Feel &#8211; II. Lost Butterfly</a></h6>
+                                        <small>2019</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/avengers-endgame-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/avengers-endgame-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/avengers-endgame-200x300.jpg 200w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/avengers-endgame-682x1024.jpg 682w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/avengers-endgame-768x1153.jpg 768w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/avengers-endgame-600x900.jpg 600w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/avengers-endgame.jpg 798w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/avengers-endgame/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/avengers-endgame/index.html">Avengers: Endgame</a></h6>
+                                        <small>2019</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/The-Girl-On-The-Train-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/The-Girl-On-The-Train-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/The-Girl-On-The-Train-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/the-girl-on-the-train/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/the-girl-on-the-train/index.html">The Girl on the Train</a></h6>
+                                        <small>2016</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/Rush-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/Rush-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/Rush-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/rush/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/rush/index.html">Rush</a></h6>
+                                        <small>2013</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/wind-river-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/wind-river-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/wind-river-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/wind-river/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/wind-river/index.html">Wind River</a></h6>
+                                        <small>2017</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/NymphomaniacVol1-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/NymphomaniacVol1-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/NymphomaniacVol1-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/nymphomaniac-vol-i/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/nymphomaniac-vol-i/index.html">Nymphomaniac: Vol. I</a></h6>
+                                        <small>2013</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/NymphomaniacVol2-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/NymphomaniacVol2-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/NymphomaniacVol2-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/nymphomaniac-vol-2/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/nymphomaniac-vol-2/index.html">Nymphomaniac: Vol. II</a></h6>
+                                        <small>2013</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/Parasite1-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/Parasite1-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/Parasite1-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/parasite/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/parasite/index.html">Parasite</a></h6>
+                                        <small>2019</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/7thseal-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/7thseal-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/7thseal-200x300.jpg 200w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/7thseal-682x1024.jpg 682w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/7thseal-768x1153.jpg 768w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/7thseal-600x900.jpg 600w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/7thseal.jpg 898w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/the-seventh-seal/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/the-seventh-seal/index.html">The Seventh Seal</a></h6>
+                                        <small>1957</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/it-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/it-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/it-200x300.jpg 200w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/it-600x900.jpg 600w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/it.jpg 666w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/it/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/it/index.html">It</a></h6>
+                                        <small>2017</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/it-two-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/it-two-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/it-two-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/it-chapter-two/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/it-chapter-two/index.html">It: Chapter Two</a></h6>
+                                        <small>2019</small>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-6 col-sm-4 col-xl-2 p-3 post">
+                                    <div class="position-relative d-block">
+                                        <img width="250" height="375" src="wp-content/uploads/2019/10/Mother-250x375.jpg" class="img-fluid shadow-sm wp-post-image" alt="" loading="lazy" srcset="https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/Mother-250x375.jpg 250w, https://demo.ramsthemes.com/projects/ingmarwp/wp-content/uploads/2019/10/Mother-600x900.jpg 600w"
+                                            sizes="(max-width: 250px) 100vw, 250px" />
+                                        <a href="movies/mother/index.html" class="imageoutlink"></a>
+                                    </div>
+                                    <div class="p-2 my-md-2">
+                                        <h6 class="title-500"><a href="movies/mother/index.html">Mother!</a></h6>
+                                        <small>2017</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container-fluid py-3 bg-footer border-top">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="p-3">
+                            <div id="text-2" class="widget_text">
+                                <h6 class="widget_titles">Our Work is</h6>
+                                <div class="textwidget">
+                                    <p>Designed, crafted and built with WordPress, Bootstrap and ACF Pro.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="p-3">
+                            <div id="text-4" class="widget_text">
+                                <h6 class="widget_titles">Contact</h6>
+                                <div class="textwidget">
+                                    <p>93 Pendwyallt Road &#8211; Burrington – UK<br /> BS18 4JQ<br /> 077 3021 1081</p>
+                                    <p>info@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="p-3">
+
+                            <div id="text-5" class="widget_text">
+                                <h6 class="widget_titles">Find Us</h6>
+                                <div class="textwidget">
+                                    <div class="socialmedia"><a href="#"><i class="mx-2 fab fa-facebook-f fa-2x"></i><div class="screen-reader-text">Facebook</div></a><a href="#"><i class="mx-2 fab fa-twitter fa-2x"></i><div class="screen-reader-text">Twitter</div></a>
+                                        <a href="#"><i class="mx-2 fab fa-instagram fa-2x"></i>
+                                            <div class="screen-reader-text">Intagram</div>
+                                        </a><a href="#"><i class="mx-2 fab fa-youtube fa-2x"></i><div class="screen-reader-text">Youtube</div></a><a href="#"><i class="mx-2 fab fa-vimeo fa-2x"></i><div class="screen-reader-text">Vimeo</div></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="p-3">
+
+                            <div id="text-3" class="widget_text">
+                                <h6 class="widget_titles">About</h6>
+                                <div class="textwidget">
+                                    <i class="far fa-copyright"></i> 2020 INGMAR . All Rights Reserved
+                                    <p>Designed with ❤️ and 🧠 by RAMSTHEMES</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <a href="#" id="back-to-top" class="btn-custom" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+    </main>
+    <script type='text/javascript' id='contact-form-7-js-extra'>
+        /* <![CDATA[ */
+        var wpcf7 = {
+            "apiSettings": {
+                "root": "https:\/\/demo.ramsthemes.com\/projects\/ingmarwp\/wp-json\/contact-form-7\/v1",
+                "namespace": "contact-form-7\/v1"
+            }
+        };
+
+        /* ]]> */
+    </script>
+
+    <script>
+        var elements = document.getElementsByClassName("video_avaliable");
+        for (var i = 0; i < elements.length; i++) {
+            function start() {
+                var a = this.getElementsByClassName('preview_video')[0];
+                play = a.play.bind(a);
+                play();
+            }
+            elements[i].addEventListener('touchstart', start, false);
+        }
+    </script>
+
+    <script src='wp-content/plugins/contact-form-7/includes/js/scriptsbb49.js?ver=5.2.2' id='contact-form-7-js'></script>
+    <script src='wp-content/themes/ingmarwp/assets/js/moded03b.js?ver=5.5.1' id='ingmarwp-mode-js-js'></script>
+    <script src='wp-content/themes/ingmarwp/assets/bootstrap/bootstrap.bundle.min5b31.js?ver=4.3.1' id='bootstrap-js-js'></script>
+    <script src='wp-content/themes/ingmarwp/assets/js/navbard03b.js?ver=5.5.1' id='navbar-js-js'></script>
+    <script src='wp-content/themes/ingmarwp/assets/js/simplebar.mind03b.js?ver=5.5.1' id='scrollbar-js-js'></script>
+    <script src='wp-content/themes/ingmarwp/assets/js/customd03b.js?ver=5.5.1' id='ingmarwp-custom-js-js'></script>
+    <script src='wp-content/themes/ingmarwp/assets/js/pkgd/flickity.pkgd.mindc8c.js?ver=2.2' id='flickity-js-js'></script>
+    <script src='wp-content/themes/ingmarwp/assets/js/pace/pace.mind03b.js?ver=5.5.1' id='pace-js-js'></script>
+    <script src='wp-includes/js/jquery/ui/position.mine899.js?ver=1.11.4' id='jquery-ui-position-js'></script>
+    <script src='wp-includes/js/jquery/ui/menu.mine899.js?ver=1.11.4' id='jquery-ui-menu-js'></script>
+    <script src='wp-includes/js/dist/vendor/wp-polyfill.min89b1.js?ver=7.4.4' id='wp-polyfill-js'></script>
+    <script id='wp-polyfill-js-after'>
+        ('fetch' in window) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-fetch.min6e0e.js?ver=3.0.0"></scr' + 'ipt>');
+        (document.contains) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-node-contains.min2e00.js?ver=3.42.0"></scr' + 'ipt>');
+        (window.DOMRect) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min2e00.js?ver=3.42.0"></scr' + 'ipt>');
+        (window.URL && window.URL.prototype && window.URLSearchParams) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-url.min5aed.js?ver=3.6.4"></scr' + 'ipt>');
+        (window.FormData && window.FormData.prototype.keys) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-formdata.mine9bd.js?ver=3.0.12"></scr' + 'ipt>');
+        (Element.prototype.matches && Element.prototype.closest) || document.write('<script src="wp-includes/js/dist/vendor/wp-polyfill-element-closest.min4c56.js?ver=2.0.2"></scr' + 'ipt>');
+    </script>
+    <script src='wp-includes/js/dist/dom-ready.mina7c8.js?ver=db63eb2f693cb5e38b083946b14f0684' id='wp-dom-ready-js'></script>
+    <script src='wp-includes/js/dist/i18n.min77be.js?ver=bb7c3c45d012206bfcd73d6a31f84d9e' id='wp-i18n-js'></script>
+    <script id='wp-a11y-js-translations'>
+        (function(domain, translations) {
+            var localeData = translations.locale_data[domain] || translations.locale_data.messages;
+            localeData[""].domain = domain;
+            wp.i18n.setLocaleData(localeData, domain);
+        })("default", {
+            "locale_data": {
+                "messages": {
+                    "": {}
+                }
+            }
+        });
+    </script>
+    <script src='wp-includes/js/dist/a11y.mind7ed.js?ver=13971b965470c74a60fa32d392c78f2f' id='wp-a11y-js'></script>
+    <script type='text/javascript' id='jquery-ui-autocomplete-js-extra'>
+        /* <![CDATA[ */
+        var uiAutocompleteL10n = {
+            "noResults": "No results found.",
+            "oneResult": "1 result found. Use up and down arrow keys to navigate.",
+            "manyResults": "%d results found. Use up and down arrow keys to navigate.",
+            "itemSelected": "Item selected."
+        };
+        /* ]]> */
+    </script>
+    <script src='wp-includes/js/jquery/ui/autocomplete.mine899.js?ver=1.11.4' id='jquery-ui-autocomplete-js'></script>
+    <script src='wp-includes/js/jquery/suggest.min3914.js?ver=1.1-20110113' id='suggest-js'></script>
+    <script src='wp-includes/js/jquery/ui/slider.mine899.js?ver=1.11.4' id='jquery-ui-slider-js'></script>
+    <script type='text/javascript' id='wpuf-subscriptions-js-extra'>
+        /* <![CDATA[ */
+        var wpuf_subscription = {
+            "pack_notice": "Please Cancel Your Currently Active Pack first!"
+        };
+        /* ]]> */
+    </script>
+    <script src='wp-content/plugins/wp-user-frontend/assets/js/subscriptionsd03b.js?ver=5.5.1' id='wpuf-subscriptions-js'></script>
+    <script src='wp-includes/js/wp-embed.mind03b.js?ver=5.5.1' id='wp-embed-js'></script>
+</body>
+
+<!-- Mirrored from demo.ramsthemes.com/projects/ingmarwp/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Oct 2020 19:18:57 GMT -->
+
+</html>
